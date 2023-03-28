@@ -1,0 +1,18 @@
+m-font-face( $font-family = "Arial", $file-path = "", $local-name = "", $weight, $style = normal) {
+	@font-face {
+		font-family: $font-family;
+		src: url($file-path + '.eot');
+		src: local($local-name),
+			 url($file-path + '.eot?#iefix') format('embedded-opentype'),
+			 url($file-path + '.ttf') format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+
+m-font-face("Montserrat", "../fonts/Montserrat/Montserrat-Regular", "MADE Outer Sans Regular", normal);
+m-font-face("Montserrat", "../fonts/Montserrat/Montserrat-Medium", "MADE Outer Sans Regular", 500);
+m-font-face("Montserrat", "../fonts/Montserrat/Montserrat-Bold", "MADE Outer Sans Regular", 700);
+m-font-face("Montserrat", "../fonts/Montserrat/Montserrat-BoldItalic", "MADE Outer Sans Regular", 700, italic);

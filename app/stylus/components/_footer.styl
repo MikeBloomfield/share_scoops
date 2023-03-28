@@ -1,0 +1,79 @@
+.footer
+	min-width $min-width
+	color: #fff
+	&--wrapper
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+	&__container
+		padding: 120px 0
+		display flex
+	&__title
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		display: flex;
+		align-items: flex-end;
+		color: #FFFFFF;
+		margin-bottom 10px
+		&--first
+			margin-bottom 15px
+	&__item
+		max-width: 340px
+		&:nth-child(1)
+			margin-right 10vw
+		&:nth-child(2)
+			margin-right 12vw
+	&__desc
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #FFFFFF;
+	&__list
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 40px;
+		color: #FFFFFF;
+		&-link
+			color: #fff
+			transition: .3s
+			position relative
+			&:before
+				content: ""
+				bottom: -3px
+				position absolute
+				left: 0
+				right: 0
+				height: 1px
+				transform: scaleX(0)
+				transition transform .3s ease,transform-origin 0s
+				transform-origin: right center
+				background-color: #fff
+			&:hover
+				&:before
+					transform: scaleX(1)
+					transform-origin: left center
+	&__email
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 40px;
+		color: #FFFFFF;
+		transition: .3s
+		margin-bottom 20px
+		display block
+		&:hover
+			color: hsl(0, 0%, 70%)
+	&__social
+		display flex
+		margin-bottom 85px
+		&-item
+			transition: .3s
+			&:hover
+				transform: translateY(-5px) rotate(10deg) scale(1.2)
+			&:not(:last-of-type)
+				margin-right 20px
+	&__copyright
+		max-width: 320px
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: rgba(255, 255, 255, 0.4);
+			

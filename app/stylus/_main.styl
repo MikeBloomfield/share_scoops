@@ -1,0 +1,896 @@
+//main styles
+.main-wrapper
+	padding 0 0 0 0
+	min-width $min-width
+	width 100%
+	position relative
+	overflow hidden
+	min-height 100%
+	display flex
+	flex-direction column
+	justify-content flex-start	
+
+.wrapper
+	min-width $min-width
+	max-width $max-width
+	padding 0 40px 0 40px
+	margin 0 auto
+	position relative
+
+/* titles */
+p
+	font($base-font-size, $base-line-height, $text-color, $custom-font-family, 400)
+	
+
+h1
+	font($font-size-h1, $line-height-h1, $title-color, $custom-font-family, 700)
+	padding 15px 0 15px 0
+
+h2
+	font($font-size-h2, $line-height-h2, $title-color, $custom-font-family, 700)
+	
+
+h3
+	font($font-size-h3, $line-height-h3, $title-color, $custom-font-family, 700)
+	
+
+/* styles */
+.main
+	min-width $min-width
+	width 100%
+	flex-grow 1
+	margin-top 172px
+
+
+.hero
+	&__container
+		display flex
+		justify-content: space-between
+		max-width: 930px
+		margin: 0 auto 32px
+	&__title
+		font-weight: 700;
+		font-size: 90px;
+		line-height: 90px;
+		color: #FFFFFF;
+		margin-bottom 65px
+		&-line
+			display inline-block
+		&-span
+			color: #0A2138
+		&-change
+			position relative
+	&__button
+		background: #FFFFFF;
+		border-radius: 62px;
+		padding: 27px 56px 29px 59px
+		border: none
+		position relative
+		z-index 3
+		&-span
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 24px;
+			color: #0A2138;
+			display inline-block
+			padding-right 30px
+			position relative
+			&:after
+				display block
+				width: 20px
+				height: 20px
+				content: ""
+				position absolute
+				right: 0
+				top: 4px
+				background-image: url(../img/main/arrow-right.svg)
+				transition: .3s
+		&:hover > &-span:after
+			transform: translateX(10px)
+	&__right
+		position relative
+		width: 50%
+		display flex
+		justify-content: flex-end
+		align-items: flex-end
+		flex-direction: column
+	&__left
+		position relative
+	&__pic-1
+		width: 258px
+		position absolute
+		z-index: -2;
+		top: -30px;
+		left: 200px;
+	&__pic-2
+		width: 258px
+		position absolute
+		z-index: -3;
+		top: 110px;
+		left: 5px;
+	&__pic-3
+		position absolute
+		z-index: -1;
+		top: 0px;
+		left: 160px;
+	&__social-pic
+		max-width: 180px
+		display flex
+		justify-content: space-between
+		&-inner
+			position relative
+			&:nth-of-type(1)
+				z-index: 4
+				left: 31%
+			&:nth-of-type(2)
+				z-index: 3
+				left: 21%
+			&:nth-of-type(3)
+				z-index: 2
+				left: 11%
+			&:nth-of-type(4)
+				z-index: 1
+	&__spot-pic
+		width: 220%;
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		z-index: -10;
+		display: block;
+		transform: translate(-50%, -50%);
+		&-hover
+			width: 150%
+			position absolute
+			top: 0
+			left: 0
+			display block
+			z-index 5
+
+	&__social
+		display flex
+		flex-direction: column
+		align-items: right
+		max-width: 206px
+		&-pic
+			align-self: flex-end
+			margin-bottom 6px
+	&__desc
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: right;
+		color: #53C0E2;
+		transition: .3s
+		&:hover
+			color: hsl(194, 71%, 41%);
+	&__line
+		display block
+		margin: auto
+		width: 2px
+		height: 1px
+		background-color:#fff
+		position relative
+		margin-bottom 53px
+		border-radius: 50px
+		visibility: visible  !important
+		&:after
+			content: ""
+			position absolute
+			width: 6px
+			height: 6px
+			background-color: #fff
+			display block
+			bottom: 0
+			right: 50%
+			transform: translateX(50%)
+			border-radius: 50px
+		&-outer
+			height: 112px
+			margin-bottom 53px
+			
+
+
+.corp
+	&__title
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 70px;
+		text-align: center;
+		color: #FFFFFF;
+		max-width: 717px
+		margin: 0 auto 20px
+	&__desc
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: #FFFFFF;
+		max-width: 563px
+		margin: 0 auto 40px
+
+
+
+
+.slider
+	margin-bottom 30px
+	overflow-x: hidden
+	height: 120px
+	position: relative
+	display: flex
+	align-items: right
+	direction: rtl
+	overflow-y: auto
+	&:last-of-type
+		margin-bottom: 0
+	&__container
+		display flex
+
+
+	&__item
+		width: 120px
+		height: 120px
+		margin-right 15px
+		margin-left: 15px
+		position: relative
+		&-abs
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			font-size 16px
+			line-height: 24px
+			color: #fff
+			font-weight: 700
+			text-align: center
+			width: 100%
+
+
+.slider2
+	margin-bottom 30px
+	overflow-x: hidden
+	height: 120px
+	position: relative
+	display: flex
+	align-items: right
+	
+
+@keyframes slider {
+		0% {
+			transform: translateX(0)
+		}
+		100% {
+			transform: translateX(100%)
+		}
+	}
+
+@keyframes slider2 {
+	0% {
+		transform: translateX(0)
+	}
+	100% {
+		transform: translateX(-100%)
+	}
+}
+.animate 
+	animation: slider 48s linear infinite;
+	
+
+
+
+
+	
+	
+	
+.animate2 
+	animation: slider2 52s linear infinite;
+	
+	
+	
+
+
+
+.animate3 
+	animation: slider 51s linear infinite;
+	
+
+
+
+.light
+	&__title
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 50px;
+		text-align: center;
+		color: #FFFFFF;
+		margin: auto
+		max-width: 944px
+		&-span
+			color: #53C0E2
+	&__top-line
+		display: flex
+		justify-content: center
+		margin: 60px auto 43px
+		width: 14px
+		height: 112px
+		svg
+			overflow: visible
+			path
+				stroke-dasharray: 117
+				stroke-dashoffset: 117
+	&__bottom-line
+		display: flex
+		justify-content: center
+		margin: 40px auto 192px
+		width: 14px
+		height: 112px
+		position: relative
+		svg
+			overflow: visible
+			path
+				stroke-dasharray: 117
+				stroke-dashoffset: 117
+
+		
+
+
+.conversation
+	&__title
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 70px;
+		color: #FFFFFF;
+		max-width: 445px
+		margin-bottom 20px
+		&-span
+			color: #53C0E2;
+			font-style italic
+	&__desc
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		color: #FFFFFF;
+		max-width: 381px
+	&__container
+		display flex
+		justify-content: space-between
+		max-width: 930px
+		margin: auto
+	&__right
+		width: 50%
+		position relative
+	&__pic
+		width: 770px
+		position absolute
+		top: -240px;
+		left: -160px;
+		z-index -1
+	&__pic-1
+		position absolute
+		top: -24%;
+		left: 34%;
+		visibility: visible  !important
+	&__pic-2
+		position absolute
+		top: 0%;
+		left: 58%;
+		visibility: visible  !important
+	&__pic-3
+		position absolute
+		top: 73%;
+		left: 82%;
+		visibility: visible  !important
+	&__pic-4
+		position absolute
+		top: 83%;
+		left: 12%;
+		visibility: visible  !important
+		
+
+
+.start
+	margin-top 280px
+	margin-bottom 150px
+	&__item-outer
+		max-width: 971px
+		height: 350px
+		position relative
+		margin: auto
+	&__item
+		padding: 100px 107px
+		max-width: 971px
+		margin: auto
+		border-radius: 60px
+		text-align: center;
+		color: #FFFFFF;
+		visibility: visible  !important
+		background: url(../img/main/start-bg.svg) center center no-repeat #113F6D;
+		&-span
+			color: #53C0E2
+		&-title
+			font-weight: 700;
+			font-size: 60px;
+			line-height: 70px;
+			color: #fff
+		&-desc
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 30px;
+			text-align: center;
+			color: #FFFFFF;
+			padding-left 30px
+			position relative
+			max-width: 510px
+			margin: 20px auto 0
+			&:before
+				content: ""
+				position absolute
+				top: 2px
+				left 0
+				display block
+				width: 24px
+				height: 24px
+				background: url(../img/main/lock.svg)
+	&__item-abs-1
+		font-weight: 700;
+		font-size: 13.5684px;
+		line-height: 19px;
+		color: #FFFFFF;
+		background: #22568B;
+		border-radius: 30px
+		position absolute
+		top: 2%
+		left 5%
+		max-width: 173px
+		padding: 10px 19px
+		transform: rotate(-15deg)
+		text-align center
+		p
+			font-weight: 500;
+			font-size: 10.4372px;
+			line-height: 16px;
+			text-align: center
+			color: rgba(255, 255, 255, 0.41);
+	&__item-abs-2
+		font-weight: 700;
+		font-size: 15.2483px;
+		line-height: 21px;
+		color: #FFFFFF;
+		position absolute
+		top: -3%
+		left 44%
+		max-width: 236px
+		background: #0C2138
+		padding: 12px 29px
+		border-radius: 30px
+		transform: rotate(15deg)
+		text-align center
+		p
+			font-weight: 500;
+			font-size: 11.7294px;
+			line-height: 18px;
+			color: rgba(255, 255, 255, 0.41);
+			text-align center
+	&__item-abs-3
+		font-weight: 700;
+		font-size: 10.6869px;
+		line-height: 15px;
+		position absolute
+		top: 8%
+		left 77%
+		max-width: 144px
+		background: #CDAB2E
+		color: #fff
+		padding: 8px 16px
+		border-radius: 30px
+		transform: rotate(-15deg)
+		text-align center
+		p
+			font-weight: 500;
+			font-size: 8.2207px;
+			line-height: 12px;
+			text-align center
+			color: rgba(255, 255, 255, 0.41);
+	&__item-abs-4
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 18px;
+		color: #FFFFFF;
+		position absolute
+		top: 72%;
+		left: -4%;
+		max-width: 180px
+		background: #0C2138
+		padding: 10px 22px
+		border-radius: 30px
+		transform: rotate(13deg)
+		text-align center
+		p
+			font-weight: 500;
+			font-size: 10px;
+			line-height: 15px;
+			color: rgba(255, 255, 255, 0.41);
+			text-align center
+	&__item-abs-5
+		font-weight: 700;
+		font-size: 15.2824px;
+		line-height: 21px;
+		color: #FFFFFF;
+		position absolute
+		top: 91%;
+		left: 28%;
+		transform: rotate(-4deg)
+		max-width: 210px
+		background: #22568B;
+		padding: 12px 25px
+		border-radius: 30px
+		text-align center
+		p
+			font-weight: 500;
+			font-size: 11.7557px;
+			line-height: 18px;
+			color: rgba(255, 255, 255, 0.41);
+			text-align center
+	&__item-abs-6
+		font-weight: 700;
+		font-size: 12.5965px;
+		line-height: 17px;
+		color: #FFFFFF;
+		position absolute
+		top: 88%
+		left 76%
+		transform: rotate(9deg);
+		max-width: 173px
+		background: #0C2138
+		padding: 9px 23px
+		border-radius: 30px
+		text-align center
+		p
+			font-weight: 500;
+			font-size: 9.6896px;
+			line-height: 15px;
+			color: rgba(255, 255, 255, 0.41);
+			text-align center
+		
+		
+		
+		&-span
+			color: #53C0E2
+		&-desc
+			margin: 20px auto 0
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 30px;
+			text-align: center;
+			color: #FFFFFF;
+			max-width: 429px
+			position relative
+			padding-left 30px
+			&:before
+				content ""
+				position absolute
+				display block
+				top: 0
+				left: 0
+				width: 24px
+				height: 24px
+				background-image: url(../img/main/lock.svg)
+
+	
+
+.slick-center
+	opacity 1!important
+	
+	
+
+
+.feedback
+	margin-bottom 81px
+	&__container
+		display flex
+		justify-content: center
+		width: 100vw
+	&__item
+		display flex
+		flex-direction: column
+		align-items: center
+		padding-top 43px
+		position relative
+		width: 515px
+		margin-right 35px
+		margin-left 35px
+		opacity .2
+		transition: 1s
+		&:before
+			content ""
+			position absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			display block
+			width 37px
+			height: 23px
+			background: url(../img/main/comment.svg)
+	&__desc
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom 10px
+	&__name
+		display block
+		margin: auto
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.6);
+
+.owl-item
+	width: 515px
+
+.community
+	.wrapper&:first-of-type
+		display flex
+		justify-content: center
+	&__item
+		margin: 0 auto 131px
+		background-color: #53C0E2
+		width: 650px
+		border-radius: 350px
+		height: 650px
+		padding: 192px 0 173px
+		position relative
+		&-title
+			font-weight: 700;
+			font-size: 40px;
+			line-height: 60px;
+			text-align: center;
+			color: #0A2138;
+			margin-bottom 30px
+			padding-top 52px
+			position relative
+			&:before
+				content ""
+				position absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				width: 32px
+				height: 32px
+				display block
+				background-image: url(../img/main/muscles.svg)
+			&-span
+				font-size 60px
+		&-desc
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 30px;
+			text-align: center;
+			color: #0A2138;
+			max-width: 467px
+			margin: auto
+		&-abs-pic-1
+			position absolute
+			top: 12%
+			left: -5%
+			visibility: visible !important
+		&-abs-pic-2
+			position absolute
+			top: 1%
+			left: 69%
+			visibility: visible !important
+		&-abs-pic-3
+			position absolute
+			top: 14%
+			left: 25%
+			visibility: visible !important
+		&-abs-pic-4
+			position absolute
+			top: 4%
+			left: 59%
+			visibility: visible !important
+		&-abs-pic-5
+			position absolute
+			bottom: -6%
+			left: 50%
+			transform: translateX(-50%)
+			visibility: visible !important
+			svg
+				overflow: visible
+				path
+					stroke-dasharray: 117
+					stroke-dashoffset: 117
+			
+	&__pic
+		max-width: 650px
+		margin: 0  auto 131px
+		padding-right: 40px;
+		&-mobile
+			display none
+	&__container
+		margin-bottom 33px
+		&-inner
+			display flex
+			margin: auto
+			justify-content: center
+	&__desc
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: #FFFFFF;
+		max-width: 990px
+		margin: auto
+		&:first-of-type
+			margin: 0 auto 10px
+	&__team
+		max-width: 80px
+		position relative
+		&:hover
+			&:after
+				opacity 1
+				visibility: visible
+		&:not(:last-of-type)
+			margin-right 20px
+		&::after
+			transition: .5s
+			position absolute
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 30px;
+			color: #1c0606;
+			padding: 8px 20px 10px 20px
+			background-color: #C0F0FF
+			border-radius: 30px;
+			z-index 2
+			display inline
+			opacity: 0
+			visibility: hidden
+		&:nth-child(1):after	
+			content: "Jerome Emilien, Engineer";
+			top: -20%;
+			left: -360%;
+			width: 310px;
+		&:nth-child(2):after
+			content: "Amy Flowers, Sustainability Analyst";
+			top: -50%;
+			left: -200%;
+			width: 400px;
+		&:nth-child(3):after
+			content "Sarah Razanatsoa, Engineer"
+			top: -50%;
+			left: -160%;
+			width: 330px;
+		&:nth-child(4):after
+			content "Augustus Christensen, Founder & CEO"
+			top: -50%;
+			left: -220%;
+			width 430px
+		&:nth-child(5):after
+			content "Zia Karim, CTO"
+			top: -20%
+			left: 70%
+			width 190px
+	&__crown
+		padding: 56px 65px
+		max-width: 770px
+		margin: 80px auto 0
+		background-image: url(../img/main/background.svg)
+		background-repeat: no-repeat
+		background-size: contain
+		position relative
+		&-pic
+			position absolute
+			top -20%
+			left: 50%
+			transform: translateX(-50%)
+		&-desc
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 30px;
+			text-align: center;
+			color: #FFFFFF;
+			max-width: 640px
+			margin: auto
+	&__arrow
+		display flex
+		justify-content: center
+		margin: 80px auto 137px
+		width: 24px
+		height: 112px
+		svg
+			overflow: visible
+			path
+				stroke-dasharray: 122
+				stroke-dashoffset: 122
+	&__pic-left
+		width: 500px
+		background: url(../img/main/mountains.png) 0 0/ 100% 100%
+		height: 260px
+		border-radius: 165px
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: #fff
+		display: inline-block
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		padding-bottom: 20px;
+		position relative
+		z-index 1
+		transition-property: transform
+		border: 10px solid #0A2138
+		transition: 0.2s
+		&:hover
+			box-shadow: 40px 0 50px rgba(0,0,0, .5)
+
+	&__pic-right
+		width: 500px
+		background: url(../img/main/library.png) 0 0/ 100% 100%
+		height: 260px
+		position absolute
+		z-index 4
+		top -27%
+		right: 2%
+		border-radius: 165px
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: #fff
+		display: inline-block
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		padding-bottom: 20px;
+		transition: 0.2s
+		&:hover
+			box-shadow: 40px 0 50px rgba(0,0,0, .5)
+			
+
+	&__container-bottom
+		display flex
+		max-width: 940px
+		margin: 0 auto 120px
+		position relative
+		
+
+@-webkit-keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+            transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+            transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
